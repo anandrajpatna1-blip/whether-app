@@ -1,31 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Weather Forecasting App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>3D Weather Forecasting App</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+    </div>
+
+    <!-- Main Container -->
     <div class="container">
 
-        <h1>Weather Forecasting App</h1>
+        <h1>🌦️ Weather Forecast</h1>
 
-        <input type="text" id="city" placeholder="Enter City Name">
+        <p class="subtitle">Discover Weather Around You</p>
 
-        <button onclick="getWeather()">Search</button>
+        <!-- Search Section -->
+        <div class="search-box">
 
+            <input type="text" id="city"
+                placeholder="Enter city name">
+
+            <button onclick="getWeather()">
+                Search
+            </button>
+
+        </div>
+
+        <!-- Weather Details -->
         <div class="weather">
-            <h2 id="cityName">City Name</h2>
+
+            <h2 id="cityName">Your City</h2>
+
+            <div class="weather-icon">
+                <img id="weatherIcon" src=""
+                    alt="Weather Icon">
+            </div>
 
             <h1 id="temperature">-- °C</h1>
 
             <p id="condition">Weather Condition</p>
 
-            <p id="humidity">Humidity: --</p>
+            <div class="details">
 
-            <p id="wind">Wind Speed: --</p>
+                <div class="detail-card">
+                    <span>💧</span>
+                    <p id="humidity">Humidity: --</p>
+                </div>
+
+                <div class="detail-card">
+                    <span>💨</span>
+                    <p id="wind">Wind Speed: --</p>
+                </div>
+
+            </div>
+
         </div>
+
+        <p class="footer">Powered by WeatherAPI</p>
 
     </div>
 
